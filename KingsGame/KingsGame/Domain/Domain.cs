@@ -13,7 +13,11 @@ namespace KingsGame.Domain {
 		public Armory Armory { get; set; }
 
 		public Domain() {
-			// Initialize domain
+			Manor = new Manor();
+			Deposit = new DepositOfResources();
+			AdministrationOffice = new AdministrationOffice();
+			Tools = new Tools();
+			Armory = new Armory();
 		}
 	}
 }

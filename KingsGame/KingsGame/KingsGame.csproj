@@ -54,6 +54,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Campaign\Campaign.cs" />
+    <Compile Include="Campaign\CampaignItem.cs" />
+    <Compile Include="Campaign\ClayMine.cs" />
+    <Compile Include="Campaign\Fields.cs" />
+    <Compile Include="Campaign\Forest.cs" />
+    <Compile Include="Campaign\SteelMine.cs" />
+    <Compile Include="Campaign\StonePit.cs" />
+    <Compile Include="City\City.cs" />
+    <Compile Include="City\CityItem.cs" />
+    <Compile Include="City\Dwelling.cs" />
+    <Compile Include="City\Market.cs" />
+    <Compile Include="City\Palace.cs" />
+    <Compile Include="City\Tavern.cs" />
+    <Compile Include="City\Wall.cs" />
     <Compile Include="Domain\Armory.cs" />
     <Compile Include="Domain\DepositOfResources.cs" />
     <Compile Include="Domain\AdministrationOffice.cs" />
