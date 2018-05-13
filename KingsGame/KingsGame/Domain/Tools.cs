@@ -10,7 +10,7 @@ namespace KingsGame.Domain {
 
 		public Tools() : base() {
 			UpgradeCost = new List<Resources> { new Resources(Type.Wood), new Resources(Type.Wood) };
-			Reward = 3;
+			PointsReward = 3;
 			ResourcesPerWorker = 1;
 		}
 	}

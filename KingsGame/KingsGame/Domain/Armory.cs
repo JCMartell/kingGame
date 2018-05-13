@@ -11,7 +11,7 @@ namespace KingsGame.Domain {
 		public Armory() : base() {
 			UpgradeCost = new List<Resources> { new Resources(Type.Steel) };
 			GoldCost = 1;
-			Reward = 3;
+			PointsReward = 3;
 			PowerPerSoldier = 0.5;
 		}
 	}

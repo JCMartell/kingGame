@@ -10,8 +10,39 @@ namespace KingsGame.Domain {
 
 		public Manor() : base() {
 			UpgradeCost = new List<Resources> { new Resources(Type.Rock), new Resources(Type.Rock) };
-			Reward = 3;
+			PointsReward = 3;
 			Capacity = 1;
+		}
+
+		public new void Upgrade() {
+			base.Upgrade();
+
+			PointsReward += 3;
+
+			if (Level == 1) {
+				UpgradeCost = new List<Resources> {
+					new Resources(Type.Rock),
+					new Resources(Type.Rock),
+					new Resources(Type.Rock),
+					new Resources(Type.Clay),
+					new Resources(Type.Wood)
+				};
+				Capacity = 2;
+			} else if (Level == 2) {
+				UpgradeCost = new List<Resources> {
+					new Resources(Type.Rock),
+					new Resources(Type.Rock),
+					new Resources(Type.Rock),
+					new Resources(Type.Rock),
+					new Resources(Type.Steel),
+					new Resources(Type.Steel),
+					new Resources(Type.Steel)
+				};
+				Capacity = 3;
+			} else {
+				UpgradeCost = new List<Resources>();
+				Capacity = 5;
+			}
 		}
 	}
 }

@@ -11,7 +11,7 @@ namespace KingsGame.Domain {
 
 		public AdministrationOffice() : base() {
 			UpgradeCost = new List<Resources> { new Resources(Type.Wheat), new Resources(Type.Wheat) };
-			Reward = 4;
+			PointsReward = 4;
 			GoldPerTurn = 0;
 			SeigniorialSeals = 1;
 		}

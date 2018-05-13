@@ -9,11 +9,20 @@ namespace KingsGame.Domain {
 		public int Level { get; set; }
 		public List<Resources> UpgradeCost { get; set; }
 		public int GoldCost { get; set; }
-		public int Reward { get; set; }
+		public int PointsReward { get; set; }
+		public bool MaxLevel { get; set; }
 
 		public DomainItem() {
 			Level = 0;
 			GoldCost = 0;
+			MaxLevel = false;
+		}
+
+		public void Upgrade() {
+			Level++;
+			if (Level == 3) {
+				MaxLevel = true;
+			}
 		}
 	}
 }
