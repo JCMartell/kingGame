@@ -54,10 +54,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Domain\Armory.cs" />
     <Compile Include="Domain\DepositOfResources.cs" />
     <Compile Include="Domain\AdministrationOffice.cs" />
+    <Compile Include="Domain\Domain.cs" />
     <Compile Include="Domain\DomainItem.cs" />
     <Compile Include="Domain\Manor.cs" />
+    <Compile Include="Domain\Tools.cs" />
     <Compile Include="Resources.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
