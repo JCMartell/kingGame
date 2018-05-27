@@ -20,6 +20,8 @@ namespace KingsGame.Domain {
 			PointsReward += 3;
 
 			if (Level == 1) {
+				Capacity = 2;
+
 				UpgradeCost = new List<Resources> {
 					new Resources(Type.Rock),
 					new Resources(Type.Rock),
@@ -27,8 +29,9 @@ namespace KingsGame.Domain {
 					new Resources(Type.Clay),
 					new Resources(Type.Wood)
 				};
-				Capacity = 2;
 			} else if (Level == 2) {
+				Capacity = 3;
+
 				UpgradeCost = new List<Resources> {
 					new Resources(Type.Rock),
 					new Resources(Type.Rock),
@@ -38,10 +41,10 @@ namespace KingsGame.Domain {
 					new Resources(Type.Steel),
 					new Resources(Type.Steel)
 				};
-				Capacity = 3;
 			} else {
-				UpgradeCost = new List<Resources>();
 				Capacity = 5;
+
+				UpgradeCost = new List<Resources>();
 			}
 		}
 	}
