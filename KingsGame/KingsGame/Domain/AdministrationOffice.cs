@@ -11,9 +11,45 @@ namespace KingsGame.Domain {
 
 		public AdministrationOffice() : base() {
 			UpgradeCost = new List<Resources> { new Resources(Type.Wheat), new Resources(Type.Wheat) };
-			PointsReward = 4;
+			PointsReward = 0;
 			GoldPerTurn = 0;
 			SeigniorialSeals = 1;
+		}
+
+		public new void Upgrade() {
+			base.Upgrade();
+
+			PointsReward += 4;
+
+			if (Level == 1) {
+				SeigniorialSeals = 2;
+
+				UpgradeCost = new List<Resources> {
+					new Resources(Type.Wheat),
+					new Resources(Type.Wheat),
+					new Resources(Type.Wheat),
+					new Resources(Type.Wheat)
+				};
+
+				GoldCost = 2;
+			} else if (Level == 2) {
+				GoldPerTurn = 1;
+
+				UpgradeCost = new List<Resources> {
+					new Resources(Type.Wheat),
+					new Resources(Type.Wheat),
+					new Resources(Type.Wheat),
+					new Resources(Type.Wheat),
+					new Resources(Type.Wheat),
+					new Resources(Type.Clay),
+					new Resources(Type.Clay)
+				};
+
+				GoldCost = 6;
+			} else {
+				SeigniorialSeals = 3;
+				GoldPerTurn = 2;
+			}
 		}
 	}
 }

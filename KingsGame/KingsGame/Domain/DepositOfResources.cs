@@ -10,7 +10,7 @@ namespace KingsGame.Domain {
 
 		public DepositOfResources() : base() {
 			UpgradeCost = new List<Resources> { new Resources(Type.Clay), new Resources(Type.Clay) };
-			PointsReward = 3;
+			PointsReward = 0;
 			MaxResources = 5;
 		}
 

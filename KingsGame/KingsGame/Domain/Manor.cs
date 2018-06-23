@@ -10,7 +10,7 @@ namespace KingsGame.Domain {
 
 		public Manor() : base() {
 			UpgradeCost = new List<Resources> { new Resources(Type.Rock), new Resources(Type.Rock) };
-			PointsReward = 3;
+			PointsReward = 0;
 			Capacity = 1;
 		}
 
