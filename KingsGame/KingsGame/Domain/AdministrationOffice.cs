@@ -17,6 +17,10 @@ namespace KingsGame.Domain {
 		}
 
 		public new void Upgrade() {
+			if (MaxLevel) {
+				return;
+			}
+
 			base.Upgrade();
 
 			PointsReward += 4;
@@ -49,6 +53,8 @@ namespace KingsGame.Domain {
 			} else {
 				SeigniorialSeals = 3;
 				GoldPerTurn = 2;
+
+				UpgradeCost = null;
 			}
 		}
 	}

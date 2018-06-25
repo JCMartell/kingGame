@@ -15,6 +15,10 @@ namespace KingsGame.Domain {
 		}
 
 		public new void Upgrade() {
+			if (MaxLevel) {
+				return;
+			}
+
 			base.Upgrade();
 
 			PointsReward += 3;
@@ -43,7 +47,7 @@ namespace KingsGame.Domain {
 
 				GoldCost = 2;
 			} else {
-				UpgradeCost = new List<Resources>();
+				UpgradeCost = null;
 			}
 		}
 	}

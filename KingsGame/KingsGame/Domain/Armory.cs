@@ -11,8 +11,38 @@ namespace KingsGame.Domain {
 		public Armory() : base() {
 			UpgradeCost = new List<Resources> { new Resources(Type.Steel) };
 			GoldCost = 1;
-			PointsReward = 3;
+			PointsReward = 0;
 			PowerPerSoldier = 0.5;
+		}
+
+		public new void Upgrade() {
+			if (MaxLevel) {
+				return;
+			}
+
+			base.Upgrade();
+
+			PointsReward += 3;
+
+			PowerPerSoldier *= 2;
+
+			if (Level == 1) {
+				UpgradeCost = new List<Resources> {
+					new Resources(Type.Steel)
+				};
+
+				GoldCost = 1;
+			} else if (Level == 2) {
+				UpgradeCost = new List<Resources> {
+					new Resources(Type.Steel),
+					new Resources(Type.Steel),
+					new Resources(Type.Steel)
+				};
+
+				GoldCost = 2;
+			} else {
+				UpgradeCost = null;
+			}
 		}
 	}
 }
