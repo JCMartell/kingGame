@@ -14,7 +14,7 @@ namespace KingsGame.Domain {
 			MaxResources = 5;
 		}
 
-		public new void Upgrade() {
+		public override void Upgrade() {
 			if (MaxLevel) {
 				return;
 			}

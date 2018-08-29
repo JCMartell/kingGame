@@ -18,7 +18,7 @@ namespace KingsGame.Domain {
 			MaxLevel = false;
 		}
 
-		public void Upgrade() {
+		public virtual void Upgrade() {
 			Level++;
 			if (Level == 3) {
 				MaxLevel = true;
