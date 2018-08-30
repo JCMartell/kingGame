@@ -17,5 +17,42 @@ namespace KingsGame.City {
 			};
 			CitizenAvailable = 2;
 		}
+
+		public override void Upgrade() {
+			if (MaxLevel) {
+				return;
+			}
+
+			base.Upgrade();
+
+			if (Level == 1) {
+				CitizenAvailable += 2;
+
+				UpgradeCost = new List<Resources> {
+					new Resources(Type.Wood),
+					new Resources(Type.Wood),
+					new Resources(Type.Wood),
+					new Resources(Type.Wood),
+					new Resources(Type.Wood),
+					new Resources(Type.Wood)
+				};
+			} else if (Level == 2) {
+				CitizenAvailable += 3;
+
+				UpgradeCost = new List<Resources> {
+					new Resources(Type.Wood),
+					new Resources(Type.Wood),
+					new Resources(Type.Wood),
+					new Resources(Type.Wood),
+					new Resources(Type.Wood),
+					new Resources(Type.Wood),
+					new Resources(Type.Wood),
+					new Resources(Type.Steel)
+				};
+			} else {
+				CitizenAvailable += 4;
+				UpgradeCost = new List<Resources>();
+			}
+		}
 	}
 }
