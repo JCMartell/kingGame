@@ -9,7 +9,7 @@ namespace KingsGame.Domain {
 		public int MaxResources { get; set; }
 
 		public DepositOfResources() : base() {
-			UpgradeCost = new List<Resources> { new Resources(Type.Clay), new Resources(Type.Clay) };
+			UpgradeCost = new List<Resource> { new Resource(Type.Clay), new Resource(Type.Clay) };
 			PointsReward = 0;
 			MaxResources = 5;
 		}
@@ -26,23 +26,23 @@ namespace KingsGame.Domain {
 			if (Level == 1) {
 				MaxResources = 7;
 
-				UpgradeCost = new List<Resources> {
-					new Resources(Type.Clay),
-					new Resources(Type.Clay),
-					new Resources(Type.Clay),
-					new Resources(Type.Clay)
+				UpgradeCost = new List<Resource> {
+					new Resource(Type.Clay),
+					new Resource(Type.Clay),
+					new Resource(Type.Clay),
+					new Resource(Type.Clay)
 				};
 			} else if (Level == 2) {
 				MaxResources = 10;
 
-				UpgradeCost = new List<Resources> {
-					new Resources(Type.Clay),
-					new Resources(Type.Clay),
-					new Resources(Type.Clay),
-					new Resources(Type.Clay),
-					new Resources(Type.Clay),
-					new Resources(Type.Steel),
-					new Resources(Type.Steel)
+				UpgradeCost = new List<Resource> {
+					new Resource(Type.Clay),
+					new Resource(Type.Clay),
+					new Resource(Type.Clay),
+					new Resource(Type.Clay),
+					new Resource(Type.Clay),
+					new Resource(Type.Steel),
+					new Resource(Type.Steel)
 				};
 			} else {
 				MaxResources = 15;

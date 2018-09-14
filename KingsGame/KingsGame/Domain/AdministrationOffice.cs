@@ -10,7 +10,7 @@ namespace KingsGame.Domain {
 		public int SeigniorialSeals { get; set; }
 
 		public AdministrationOffice() : base() {
-			UpgradeCost = new List<Resources> { new Resources(Type.Wheat), new Resources(Type.Wheat) };
+			UpgradeCost = new List<Resource> { new Resource(Type.Wheat), new Resource(Type.Wheat) };
 			PointsReward = 0;
 			GoldPerTurn = 0;
 			SeigniorialSeals = 1;
@@ -28,25 +28,25 @@ namespace KingsGame.Domain {
 			if (Level == 1) {
 				SeigniorialSeals = 2;
 
-				UpgradeCost = new List<Resources> {
-					new Resources(Type.Wheat),
-					new Resources(Type.Wheat),
-					new Resources(Type.Wheat),
-					new Resources(Type.Wheat)
+				UpgradeCost = new List<Resource> {
+					new Resource(Type.Wheat),
+					new Resource(Type.Wheat),
+					new Resource(Type.Wheat),
+					new Resource(Type.Wheat)
 				};
 
 				GoldCost = 2;
 			} else if (Level == 2) {
 				GoldPerTurn = 1;
 
-				UpgradeCost = new List<Resources> {
-					new Resources(Type.Wheat),
-					new Resources(Type.Wheat),
-					new Resources(Type.Wheat),
-					new Resources(Type.Wheat),
-					new Resources(Type.Wheat),
-					new Resources(Type.Clay),
-					new Resources(Type.Clay)
+				UpgradeCost = new List<Resource> {
+					new Resource(Type.Wheat),
+					new Resource(Type.Wheat),
+					new Resource(Type.Wheat),
+					new Resource(Type.Wheat),
+					new Resource(Type.Wheat),
+					new Resource(Type.Clay),
+					new Resource(Type.Clay)
 				};
 
 				GoldCost = 6;

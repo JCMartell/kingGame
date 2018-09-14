@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace KingsGame {
-    public class Resources {
+    public class Resource {
         public Type Type { get; set; }
 
-        public Resources(Type type) {
+        public Resource(Type type) {
             Type = type;
         }
     }

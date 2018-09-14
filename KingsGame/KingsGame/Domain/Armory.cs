@@ -9,7 +9,7 @@ namespace KingsGame.Domain {
 		public double PowerPerSoldier { get; set; }
 
 		public Armory() : base() {
-			UpgradeCost = new List<Resources> { new Resources(Type.Steel) };
+			UpgradeCost = new List<Resource> { new Resource(Type.Steel) };
 			GoldCost = 1;
 			PointsReward = 0;
 			PowerPerSoldier = 0.5;
@@ -27,16 +27,16 @@ namespace KingsGame.Domain {
 			PowerPerSoldier *= 2;
 
 			if (Level == 1) {
-				UpgradeCost = new List<Resources> {
-					new Resources(Type.Steel)
+				UpgradeCost = new List<Resource> {
+					new Resource(Type.Steel)
 				};
 
 				GoldCost = 1;
 			} else if (Level == 2) {
-				UpgradeCost = new List<Resources> {
-					new Resources(Type.Steel),
-					new Resources(Type.Steel),
-					new Resources(Type.Steel)
+				UpgradeCost = new List<Resource> {
+					new Resource(Type.Steel),
+					new Resource(Type.Steel),
+					new Resource(Type.Steel)
 				};
 
 				GoldCost = 2;

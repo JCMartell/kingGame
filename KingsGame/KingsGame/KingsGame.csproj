@@ -54,6 +54,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Action.cs" />
     <Compile Include="Campaign\Campaign.cs" />
     <Compile Include="Campaign\CampaignItem.cs" />
     <Compile Include="Campaign\ClayMine.cs" />
@@ -75,7 +76,8 @@
     <Compile Include="Domain\DomainItem.cs" />
     <Compile Include="Domain\Manor.cs" />
     <Compile Include="Domain\Tools.cs" />
-    <Compile Include="Resources.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Resource.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

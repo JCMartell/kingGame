@@ -9,11 +9,11 @@ namespace KingsGame.City {
 		public int CitizenAvailable { get; set; }
 
 		public Dwelling() : base() {
-			UpgradeCost = new List<Resources> {
-				new Resources(Type.Wood),
-				new Resources(Type.Wood),
-				new Resources(Type.Wood),
-				new Resources(Type.Wood)
+			UpgradeCost = new List<Resource> {
+				new Resource(Type.Wood),
+				new Resource(Type.Wood),
+				new Resource(Type.Wood),
+				new Resource(Type.Wood)
 			};
 			CitizenAvailable = 2;
 		}
@@ -28,30 +28,30 @@ namespace KingsGame.City {
 			if (Level == 1) {
 				CitizenAvailable += 2;
 
-				UpgradeCost = new List<Resources> {
-					new Resources(Type.Wood),
-					new Resources(Type.Wood),
-					new Resources(Type.Wood),
-					new Resources(Type.Wood),
-					new Resources(Type.Wood),
-					new Resources(Type.Wood)
+				UpgradeCost = new List<Resource> {
+					new Resource(Type.Wood),
+					new Resource(Type.Wood),
+					new Resource(Type.Wood),
+					new Resource(Type.Wood),
+					new Resource(Type.Wood),
+					new Resource(Type.Wood)
 				};
 			} else if (Level == 2) {
 				CitizenAvailable += 3;
 
-				UpgradeCost = new List<Resources> {
-					new Resources(Type.Wood),
-					new Resources(Type.Wood),
-					new Resources(Type.Wood),
-					new Resources(Type.Wood),
-					new Resources(Type.Wood),
-					new Resources(Type.Wood),
-					new Resources(Type.Wood),
-					new Resources(Type.Steel)
+				UpgradeCost = new List<Resource> {
+					new Resource(Type.Wood),
+					new Resource(Type.Wood),
+					new Resource(Type.Wood),
+					new Resource(Type.Wood),
+					new Resource(Type.Wood),
+					new Resource(Type.Wood),
+					new Resource(Type.Wood),
+					new Resource(Type.Steel)
 				};
 			} else {
 				CitizenAvailable += 4;
-				UpgradeCost = new List<Resources>();
+				UpgradeCost = new List<Resource>();
 			}
 		}
 	}

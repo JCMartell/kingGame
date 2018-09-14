@@ -9,7 +9,7 @@ namespace KingsGame.Domain {
 		public int Capacity { get; set; }
 
 		public Manor() : base() {
-			UpgradeCost = new List<Resources> { new Resources(Type.Rock), new Resources(Type.Rock) };
+			UpgradeCost = new List<Resource> { new Resource(Type.Rock), new Resource(Type.Rock) };
 			PointsReward = 0;
 			Capacity = 1;
 		}
@@ -26,24 +26,24 @@ namespace KingsGame.Domain {
 			if (Level == 1) {
 				Capacity = 2;
 
-				UpgradeCost = new List<Resources> {
-					new Resources(Type.Rock),
-					new Resources(Type.Rock),
-					new Resources(Type.Rock),
-					new Resources(Type.Clay),
-					new Resources(Type.Wood)
+				UpgradeCost = new List<Resource> {
+					new Resource(Type.Rock),
+					new Resource(Type.Rock),
+					new Resource(Type.Rock),
+					new Resource(Type.Clay),
+					new Resource(Type.Wood)
 				};
 			} else if (Level == 2) {
 				Capacity = 3;
 
-				UpgradeCost = new List<Resources> {
-					new Resources(Type.Rock),
-					new Resources(Type.Rock),
-					new Resources(Type.Rock),
-					new Resources(Type.Rock),
-					new Resources(Type.Steel),
-					new Resources(Type.Steel),
-					new Resources(Type.Steel)
+				UpgradeCost = new List<Resource> {
+					new Resource(Type.Rock),
+					new Resource(Type.Rock),
+					new Resource(Type.Rock),
+					new Resource(Type.Rock),
+					new Resource(Type.Steel),
+					new Resource(Type.Steel),
+					new Resource(Type.Steel)
 				};
 			} else {
 				Capacity = 5;

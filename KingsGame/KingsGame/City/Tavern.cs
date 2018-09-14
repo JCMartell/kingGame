@@ -11,11 +11,11 @@ namespace KingsGame.City {
 		public int MercenariesPerPurchase { get; set; }
 
 		public Tavern() : base() {
-			UpgradeCost = new List<Resources> {
-				new Resources(Type.Clay),
-				new Resources(Type.Clay),
-				new Resources(Type.Clay),
-				new Resources(Type.Clay)
+			UpgradeCost = new List<Resource> {
+				new Resource(Type.Clay),
+				new Resource(Type.Clay),
+				new Resource(Type.Clay),
+				new Resource(Type.Clay)
 			};
 			MercenariesAvailable = 1;
 			MercenariesPerPurchase = 1;
@@ -32,33 +32,33 @@ namespace KingsGame.City {
 			if (Level == 1) {
 				MercenariesAvailable = 2;
 
-				UpgradeCost = new List<Resources> {
-					new Resources(Type.Clay),
-					new Resources(Type.Clay),
-					new Resources(Type.Clay),
-					new Resources(Type.Clay),
-					new Resources(Type.Clay),
-					new Resources(Type.Clay)
+				UpgradeCost = new List<Resource> {
+					new Resource(Type.Clay),
+					new Resource(Type.Clay),
+					new Resource(Type.Clay),
+					new Resource(Type.Clay),
+					new Resource(Type.Clay),
+					new Resource(Type.Clay)
 				};
 			} else if (Level == 2) {
 				MercenariesAvailable = 3;
 
-				UpgradeCost = new List<Resources> {
-					new Resources(Type.Clay),
-					new Resources(Type.Clay),
-					new Resources(Type.Clay),
-					new Resources(Type.Clay),
-					new Resources(Type.Clay),
-					new Resources(Type.Clay),
-					new Resources(Type.Clay),
-					new Resources(Type.Steel)
+				UpgradeCost = new List<Resource> {
+					new Resource(Type.Clay),
+					new Resource(Type.Clay),
+					new Resource(Type.Clay),
+					new Resource(Type.Clay),
+					new Resource(Type.Clay),
+					new Resource(Type.Clay),
+					new Resource(Type.Clay),
+					new Resource(Type.Steel)
 				};
 			} else {
 				MercenariesAvailable = 6;
 				MercenariesPerPurchase = 3;
 				Price = 2;
 
-				UpgradeCost = new List<Resources>();
+				UpgradeCost = new List<Resource>();
 			}
 		}
 	}

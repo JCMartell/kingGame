@@ -9,11 +9,11 @@ namespace KingsGame.City {
 		public double BonusDefensePerSoldier { get; set; }
 
 		public Wall() : base() {
-			UpgradeCost = new List<Resources> {
-				new Resources(Type.Wood),
-				new Resources(Type.Wood),
-				new Resources(Type.Rock),
-				new Resources(Type.Rock)
+			UpgradeCost = new List<Resource> {
+				new Resource(Type.Wood),
+				new Resource(Type.Wood),
+				new Resource(Type.Rock),
+				new Resource(Type.Rock)
 			};
 			BonusDefensePerSoldier = 0;
 		}
@@ -28,33 +28,33 @@ namespace KingsGame.City {
 			if (Level == 1) {
 				BonusDefensePerSoldier = 0.5;
 
-				UpgradeCost = new List<Resources> {
-					new Resources(Type.Wood),
-					new Resources(Type.Wood),
-					new Resources(Type.Wood),
-					new Resources(Type.Wood),
-					new Resources(Type.Rock),
-					new Resources(Type.Rock),
-					new Resources(Type.Rock),
-					new Resources(Type.Rock)
+				UpgradeCost = new List<Resource> {
+					new Resource(Type.Wood),
+					new Resource(Type.Wood),
+					new Resource(Type.Wood),
+					new Resource(Type.Wood),
+					new Resource(Type.Rock),
+					new Resource(Type.Rock),
+					new Resource(Type.Rock),
+					new Resource(Type.Rock)
 				};
 			} else if (Level == 2) {
 				BonusDefensePerSoldier = 1;
 
-				UpgradeCost = new List<Resources>() {
-					new Resources(Type.Clay),
-					new Resources(Type.Clay),
-					new Resources(Type.Clay),
-					new Resources(Type.Wheat),
-					new Resources(Type.Wheat),
-					new Resources(Type.Wheat),
-					new Resources(Type.Steel),
-					new Resources(Type.Steel),
-					new Resources(Type.Steel)
+				UpgradeCost = new List<Resource>() {
+					new Resource(Type.Clay),
+					new Resource(Type.Clay),
+					new Resource(Type.Clay),
+					new Resource(Type.Wheat),
+					new Resource(Type.Wheat),
+					new Resource(Type.Wheat),
+					new Resource(Type.Steel),
+					new Resource(Type.Steel),
+					new Resource(Type.Steel)
 				};
 			} else {
 				BonusDefensePerSoldier = 2;
-				UpgradeCost = new List<Resources>();
+				UpgradeCost = new List<Resource>();
 			}
 		}
 	}

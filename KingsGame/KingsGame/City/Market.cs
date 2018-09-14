@@ -12,10 +12,10 @@ namespace KingsGame.City {
 		public bool SteelAvailable { get; set; }
 
 		public Market() : base() {
-			UpgradeCost = new List<Resources> {
-				new Resources(Type.Wheat),
-				new Resources(Type.Wheat),
-				new Resources(Type.Wheat)
+			UpgradeCost = new List<Resource> {
+				new Resource(Type.Wheat),
+				new Resource(Type.Wheat),
+				new Resource(Type.Wheat)
 			};
 			ResourcesAvailableOfEachType = 1;
 			MaxPurchase = 2;
@@ -34,31 +34,31 @@ namespace KingsGame.City {
 				ResourcesAvailableOfEachType = 2;
 				MaxPurchase += 2;
 
-				UpgradeCost = new List<Resources> {
-					new Resources(Type.Wheat),
-					new Resources(Type.Wheat),
-					new Resources(Type.Wheat),
-					new Resources(Type.Wheat)
+				UpgradeCost = new List<Resource> {
+					new Resource(Type.Wheat),
+					new Resource(Type.Wheat),
+					new Resource(Type.Wheat),
+					new Resource(Type.Wheat)
 				};
 			} else if (Level == 2) {
 				ResourcesAvailableOfEachType = 3;
 				MaxPurchase += 2;
 
-				UpgradeCost = new List<Resources> {
-					new Resources(Type.Wheat),
-					new Resources(Type.Wheat),
-					new Resources(Type.Wheat),
-					new Resources(Type.Wheat),
-					new Resources(Type.Wheat),
-					new Resources(Type.Wheat),
-					new Resources(Type.Steel)
+				UpgradeCost = new List<Resource> {
+					new Resource(Type.Wheat),
+					new Resource(Type.Wheat),
+					new Resource(Type.Wheat),
+					new Resource(Type.Wheat),
+					new Resource(Type.Wheat),
+					new Resource(Type.Wheat),
+					new Resource(Type.Steel)
 				};
 			} else {
 				ResourcesAvailableOfEachType = 5;
 				MaxPurchase = int.MaxValue;
 				PurchasePerGold = 2;
 
-				UpgradeCost = new List<Resources>();
+				UpgradeCost = new List<Resource>();
 			}
 		}
 	}

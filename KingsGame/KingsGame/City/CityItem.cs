@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace KingsGame.City {
 	abstract class CityItem {
 		public int Level { get; set; }
-		public List<Resources> UpgradeCost { get; set; }
+		public List<Resource> UpgradeCost { get; set; }
 		public int PointsReward { get; set; }
 		public int GoldReward { get; set; }
 		public bool MaxLevel { get; set; }

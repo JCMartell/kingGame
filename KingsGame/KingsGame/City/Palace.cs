@@ -12,11 +12,11 @@ namespace KingsGame.City {
 		public int GoldPerExtraPoints { get; set; }
 
 		public Palace() : base() {
-			UpgradeCost = new List<Resources> {
-				new Resources(Type.Rock),
-				new Resources(Type.Rock),
-				new Resources(Type.Rock),
-				new Resources(Type.Rock)
+			UpgradeCost = new List<Resource> {
+				new Resource(Type.Rock),
+				new Resource(Type.Rock),
+				new Resource(Type.Rock),
+				new Resource(Type.Rock)
 			};
 			AvailablePlaces = 1;
 			PeasantCanDoSeigneurailAction = false;
@@ -35,34 +35,34 @@ namespace KingsGame.City {
 				AvailablePlaces = 2;
 				PeasantCanDoSeigneurailAction = true;
 
-				UpgradeCost = new List<Resources>() {
-					new Resources(Type.Rock),
-					new Resources(Type.Rock),
-					new Resources(Type.Rock),
-					new Resources(Type.Rock),
-					new Resources(Type.Rock),
-					new Resources(Type.Rock)
+				UpgradeCost = new List<Resource>() {
+					new Resource(Type.Rock),
+					new Resource(Type.Rock),
+					new Resource(Type.Rock),
+					new Resource(Type.Rock),
+					new Resource(Type.Rock),
+					new Resource(Type.Rock)
 				};
 			} else if (Level == 2) {
 				AvailablePlaces = 3;
 				FlatPoints = 2;
 
-				UpgradeCost = new List<Resources>() {
-					new Resources(Type.Rock),
-					new Resources(Type.Rock),
-					new Resources(Type.Rock),
-					new Resources(Type.Rock),
-					new Resources(Type.Rock),
-					new Resources(Type.Rock),
-					new Resources(Type.Rock),
-					new Resources(Type.Steel)
+				UpgradeCost = new List<Resource>() {
+					new Resource(Type.Rock),
+					new Resource(Type.Rock),
+					new Resource(Type.Rock),
+					new Resource(Type.Rock),
+					new Resource(Type.Rock),
+					new Resource(Type.Rock),
+					new Resource(Type.Rock),
+					new Resource(Type.Steel)
 				};
 			} else {
 				AvailablePlaces = 5;
 				FlatPoints = 4;
 				GoldPerExtraPoints = 1;
 
-				UpgradeCost = new List<Resources>();
+				UpgradeCost = new List<Resource>();
 			}
 		}
 	}

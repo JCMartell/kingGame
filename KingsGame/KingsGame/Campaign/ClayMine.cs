@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 namespace KingsGame.Campaign {
 	class ClayMine : CampaignItem {
 		public ClayMine() : base() {
-			UpgradeCost = new List<Resources> {
-				new Resources(Type.Clay),
-				new Resources(Type.Clay),
-				new Resources(Type.Clay)
+			UpgradeCost = new List<Resource> {
+				new Resource(Type.Clay),
+				new Resource(Type.Clay),
+				new Resource(Type.Clay)
 			};
 		}
 
@@ -24,12 +24,12 @@ namespace KingsGame.Campaign {
 			Capacity += 1;
 
 			if (Level == 1) {
-				UpgradeCost.Add(new Resources(Type.Clay));
-				UpgradeCost.Add(new Resources(Type.Clay));
+				UpgradeCost.Add(new Resource(Type.Clay));
+				UpgradeCost.Add(new Resource(Type.Clay));
 			} else if (Level == 2) {
-				UpgradeCost.Add(new Resources(Type.Clay));
-				UpgradeCost.Add(new Resources(Type.Clay));
-				UpgradeCost.Add(new Resources(Type.Steel));
+				UpgradeCost.Add(new Resource(Type.Clay));
+				UpgradeCost.Add(new Resource(Type.Clay));
+				UpgradeCost.Add(new Resource(Type.Steel));
 			} else {
 				UpgradeCost.Clear();
 				Capacity += 1;

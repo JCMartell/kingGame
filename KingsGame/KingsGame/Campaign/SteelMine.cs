@@ -9,11 +9,11 @@ namespace KingsGame.Campaign {
 		public int GoldCost { get; set; }
 
 		public SteelMine() : base() {
-			UpgradeCost = new List<Resources> {
-				new Resources(Type.Clay),
-				new Resources(Type.Wood),
-				new Resources(Type.Wheat),
-				new Resources(Type.Rock)
+			UpgradeCost = new List<Resource> {
+				new Resource(Type.Clay),
+				new Resource(Type.Wood),
+				new Resource(Type.Wheat),
+				new Resource(Type.Rock)
 			};
 			GoldCost = 1;
 			PointsReward = 5;
@@ -32,16 +32,16 @@ namespace KingsGame.Campaign {
 			if (Level == 1) {
 				UpgradeCost.Clear();
 				for (int i = 0; i < 2; i++) {
-					UpgradeCost.Add(new Resources(Type.Steel));
-					UpgradeCost.Add(new Resources(Type.Rock));
-					UpgradeCost.Add(new Resources(Type.Wood));
+					UpgradeCost.Add(new Resource(Type.Steel));
+					UpgradeCost.Add(new Resource(Type.Rock));
+					UpgradeCost.Add(new Resource(Type.Wood));
 				}
 			} else if (Level == 2) {
 				UpgradeCost.Clear();
 				for (int i = 0; i < 3; i++) {
-					UpgradeCost.Add(new Resources(Type.Steel));
-					UpgradeCost.Add(new Resources(Type.Clay));
-					UpgradeCost.Add(new Resources(Type.Wheat));
+					UpgradeCost.Add(new Resource(Type.Steel));
+					UpgradeCost.Add(new Resource(Type.Clay));
+					UpgradeCost.Add(new Resource(Type.Wheat));
 				}
 			} else {
 				UpgradeCost.Clear();

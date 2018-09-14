@@ -9,7 +9,7 @@ namespace KingsGame.Domain {
 		public int ResourcesPerWorker { get; set; }
 
 		public Tools() : base() {
-			UpgradeCost = new List<Resources> { new Resources(Type.Wood), new Resources(Type.Wood) };
+			UpgradeCost = new List<Resource> { new Resource(Type.Wood), new Resource(Type.Wood) };
 			PointsReward = 0;
 			ResourcesPerWorker = 1;
 		}
@@ -25,24 +25,24 @@ namespace KingsGame.Domain {
 			ResourcesPerWorker += 1;
 
 			if (Level == 1) {
-				UpgradeCost = new List<Resources> {
-					new Resources(Type.Wood),
-					new Resources(Type.Wood),
-					new Resources(Type.Wood),
-					new Resources(Type.Wood),
-					new Resources(Type.Wheat)
+				UpgradeCost = new List<Resource> {
+					new Resource(Type.Wood),
+					new Resource(Type.Wood),
+					new Resource(Type.Wood),
+					new Resource(Type.Wood),
+					new Resource(Type.Wheat)
 				};
 			} else if (Level == 2) {
-				UpgradeCost = new List<Resources> {
-					new Resources(Type.Wood),
-					new Resources(Type.Wood),
-					new Resources(Type.Wood),
-					new Resources(Type.Wood),
-					new Resources(Type.Wood),
-					new Resources(Type.Wood),
-					new Resources(Type.Wheat),
-					new Resources(Type.Wheat),
-					new Resources(Type.Wheat)
+				UpgradeCost = new List<Resource> {
+					new Resource(Type.Wood),
+					new Resource(Type.Wood),
+					new Resource(Type.Wood),
+					new Resource(Type.Wood),
+					new Resource(Type.Wood),
+					new Resource(Type.Wood),
+					new Resource(Type.Wheat),
+					new Resource(Type.Wheat),
+					new Resource(Type.Wheat)
 				};
 
 				GoldCost = 2;

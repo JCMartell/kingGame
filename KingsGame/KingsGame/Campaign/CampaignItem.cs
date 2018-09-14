@@ -8,7 +8,7 @@ namespace KingsGame.Campaign {
 	abstract class CampaignItem {
 		public int Level { get; set; }
 		public int Capacity { get; set; }
-		public List<Resources> UpgradeCost { get; set; }
+		public List<Resource> UpgradeCost { get; set; }
 		public int PointsReward { get; set; }
 		public int GoldReward { get; set; }
 		public bool MaxLevel { get; set; }
