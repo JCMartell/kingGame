@@ -13,5 +13,27 @@ namespace KingsGame.Campaign {
 				new Resources(Type.Wood)
 			};
 		}
+
+		public override void Upgrade() {
+			if (MaxLevel) {
+				return;
+			}
+
+			base.Upgrade();
+
+			Capacity += 1;
+
+			if (Level == 1) {
+				UpgradeCost.Add(new Resources(Type.Wood));
+				UpgradeCost.Add(new Resources(Type.Wood));
+			} else if (Level == 2) {
+				UpgradeCost.Add(new Resources(Type.Wood));
+				UpgradeCost.Add(new Resources(Type.Wood));
+				UpgradeCost.Add(new Resources(Type.Steel));
+			} else {
+				UpgradeCost.Clear();
+				Capacity += 1;
+			}
+		}
 	}
 }
